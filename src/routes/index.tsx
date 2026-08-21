@@ -162,6 +162,7 @@ function Index() {
               height={1280}
               fetchPriority="high"
               decoding="async"
+              sizes="(min-width: 1024px) 448px, 100vw"
               className="mx-auto h-auto w-full max-w-md"
             />
           </div>
