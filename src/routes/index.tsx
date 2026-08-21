@@ -19,7 +19,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", href: heroImg, as: "image", type: "image/webp", fetchPriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -159,6 +162,7 @@ function Index() {
               height={1280}
               fetchPriority="high"
               decoding="async"
+              sizes="(min-width: 1024px) 448px, 100vw"
               className="mx-auto h-auto w-full max-w-md"
             />
           </div>
